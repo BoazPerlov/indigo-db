@@ -313,39 +313,8 @@
         </svg>
     </div>
     <div class="container">
-        <!--<div class="dropdown" id="column1">
-            <button class="dropbtn">Financial Year</button>
-            <div class="dropdown-content">
-                <button class="btn">FY 2011/2012</button>
-                <button class="btn">FY 2012/2013</button>
-                <button class="btn">FY 2013/2014</button>
-                <button class="btn">FY 2014/2015</button>
-                <button class="btn">FY 2015/2016</button>
-                <button class="btn">FY 2016/2017</button>
-                <button class="btn">FY 2017/2018</button>
-                <button class="btn">FY 2018/2019</button>
-            </div>
-        </div>
-        <div class="dropdown" id="column2">
-                <button class="dropbtn-brand">Brand</button>
-                <div class="dropdown-content">
-                    <button class="btn-brand">2N</button>
-                    <button class="btn-brand">Aerohive</button>
-                    <button class="btn-brand">Elan</button>
-                    <button class="btn-brand">Furman</button>
-                    <button class="btn-brand">Klipsch</button>
-                    <button class="btn-brand">Krix</button>
-                    <button class="btn-brand">Niles</button>
-                    <button class="btn-brand">Rako</button>
-                    <button class="btn-brand">Sanus</button>
-                    <button class="btn-brand">Sonos</button>
-                    <button class="btn-brand">Sunfire</button>
-                    <button class="btn-brand">Xantech</button>
-                    <button class="btn-brand">Yamaha</button>
-                </div>
-            </div> -->
         <div>
-            <div class="btn-group">
+            <!--<div class="btn-group">
                 <p>Financial Year:</p>
                 <button class="btn" id=FY11>FY 2011/2012</button>
                 <button class="btn" id=FY12>FY 2012/2013</button>
@@ -393,6 +362,65 @@
                 <button class="btn-rep">Danielle Campbell</button>
                 <button class="btn-rep">Dan Goudy</button>
                 <button class="btn-rep">Kris Stevenson</button>
+            </div>-->
+            <div class="btn-group" id="FY">
+                <p>Financial Year:</p>
+                <label class="btn"><input type="checkbox" value="1" name="financialYear" id="FY11">FY 2011/2012</label>
+                <label class="btn"><input type="checkbox" value="2" name="financialYear" id="FY12">FY 2012/2013</label>
+                <label class="btn"><input type="checkbox" value="3" name="financialYear" id="FY13">FY 2013/2014</label>
+                <label class="btn"><input type="checkbox" value="4" name="financialYear" id="FY14">FY 2014/2015</label>
+                <label class="btn"><input type="checkbox" value="5" name="financialYear" id="FY15">FY 2015/2016</label>
+                <label class="btn"><input type="checkbox" value="6" name="financialYear" id="FY16">FY 2016/2017</label>
+                <label class="btn"><input type="checkbox" value="7" name="financialYear" id="FY17">FY 2017/2018</label>
+                <label class="btn"><input type="checkbox" value="8" name="financialYear" id="FY18">FY 2018/2019</label>
+            </div>
+            <div class="btn-group-month" id="month">
+                <p>Month:</p>
+                <label class="btn-month"><input type="checkbox" value="" name="month" id="nov">November</label>
+                <label class="btn-month"><input type="checkbox" value="" name="month" id="dec">December</label>
+                <label class="btn-month"><input type="checkbox" value="" name="month" id="jan">January</label>
+                <label class="btn-month"><input type="checkbox" value="" name="month" id="feb">February</label>
+                <label class="btn-month"><input type="checkbox" value="" name="month" id="mar">March</label>
+                <label class="btn-month"><input type="checkbox" value="" name="month" id="apr">April</label>
+                <label class="btn-month"><input type="checkbox" value="" name="month" id="may">May</label>
+                <label class="btn-month"><input type="checkbox" value="" name="month" id="jun">June</label>
+                <label class="btn-month"><input type="checkbox" value="" name="month" id="jul">July</label>
+                <label class="btn-month"><input type="checkbox" value="" name="month" id="aug">August</label>
+                <label class="btn-month"><input type="checkbox" value="" name="month" id="sep">September</label>
+                <label class="btn-month"><input type="checkbox" value="" name="month" id="oct">October</label>
+            </div>
+            <div class="btn-group" id="brand">
+                <p>Brand:</p>
+                <label class="btn-brand"><input type="checkbox" value="" name="brand" id="2N">2N</label>
+                <label class="btn-brand"><input type="checkbox" value="" name="brand" id="aerohive">Aerohive</label>
+                <label class="btn-brand"><input type="checkbox" value="" name="brand" id="elan">Elan</label>
+                <label class="btn-brand"><input type="checkbox" value="" name="brand" id="furman">Furman</label>
+                <label class="btn-brand"><input type="checkbox" value="" name="brand" id="klipsch">Klipsch</label>
+                <label class="btn-brand"><input type="checkbox" value="" name="brand" id="krix">Krix</label>
+                <label class="btn-brand"><input type="checkbox" value="" name="brand" id="niles">Niles</label>
+                <label class="btn-brand"><input type="checkbox" value="" name="brand" id="rako">Rako</label>
+                <label class="btn-brand"><input type="checkbox" value="" name="brand" id="sanus">Sanus</label>
+                <label class="btn-brand"><input type="checkbox" value="" name="brand">Sonos</label>
+                <label class="btn-brand"><input type="checkbox" value="" name="brand">Sunfire</label>
+                <label class="btn-brand"><input type="checkbox" value="" name="brand">Xantech</label>
+                <label class="btn-brand"><input type="checkbox" value="" name="brand">Yamaha</label>
+            </div>
+            <div class="btn-group" id="rep">
+                <p>Rep:</p>
+                <label class="btn-rep"><input type="checkbox" value="" name="rep">Craig Dunlop</label>
+                <label class="btn-rep"><input type="checkbox" value="" name="rep">Danielle Campbell</label>
+                <label class="btn-rep"><input type="checkbox" value="" name="rep">Dan Goudy</label>
+                <label class="btn-rep"><input type="checkbox" value="" name="rep">Kris Stevenson</label>
+            </div>
+            <div class="btn-group" id="label">
+                <p>Customer status:</p>
+                <label class="btn-label"><input type="checkbox" value="" name="label">Current Customer</label>
+                <label class="btn-label"><input type="checkbox" value="" name="label">Prospect</label>
+                <label class="btn-label"><input type="checkbox" value="" name="label">Hot Prospect</label>
+                <label class="btn-label"><input type="checkbox" value="" name="label">Suspect</label>
+                <label class="btn-label"><input type="checkbox" value="" name="label">Previous Customer</label>
+                <label class="btn-label"><input type="checkbox" value="" name="label">Don't Contact</label>
+                <label class="btn-label"><input type="checkbox" value="" name="label">Dead</label>
             </div>
         </div>
     </div>

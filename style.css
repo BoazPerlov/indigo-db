@@ -1,3 +1,8 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+   
+}
+
 #map a :hover{
         fill: wheat;
     }
@@ -7,7 +12,7 @@
     }
 
 #map {
-    float: left;
+    float: right;
 }
 
 /*.dropbtn {
@@ -58,6 +63,10 @@
     margin-bottom: 2px;
 }
 
+.container input {
+  display: ;
+  }
+
 .btn-group .btn-brand {
     background-color: rgb(209, 198, 209);
     position: relative;
@@ -82,17 +91,13 @@
 
 .btn-group p {
     display: inline-block;
-    width: 100px;
+    width: 120px;
     margin-bottom: 4px;
     margin-top: 4px;
     background-color: wheat;
     border-radius: 10px;
     padding: 5px;
-    
-}
-
-.btn-group .btn-rep:onclick {
-    color: red;
+    font-weight: bold;
 }
 
 .btn-group-month .btn-month {
@@ -100,7 +105,7 @@
     position: relative;
     display: inline-block;
     text-align: center;
-    width: 75px;
+    width: 65px;
     padding: 5px;
     border-radius: 10px;
     margin-top: 2px;    
@@ -108,15 +113,27 @@
 
 .btn-group-month p {
     display: inline-block;
-    width: 100px;
+    width: 120px;
     margin-bottom: 4px;
     margin-top: 4px;
     background-color: wheat;
     border-radius: 10px;
     padding: 5px;
+    font-weight: bold;
     
 }
 
 .btn-group-month {
     display: none;
+}
+
+.btn-group .btn-label {
+    background-color: rgb(209, 198, 209);
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    width: 125px;
+    padding: 5px;
+    border-radius: 10px;
+    margin-top: 2px;    
 }
