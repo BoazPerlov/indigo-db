@@ -1,0 +1,122 @@
+#map a :hover{
+        fill: wheat;
+    }
+
+#map a {
+        fill: gray;
+    }
+
+#map {
+    float: left;
+}
+
+/*.dropbtn {
+    background-color: wheat;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    padding: 10px;
+    padding-top: 0px;
+    border-radius: 10px;
+    text-align: left;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropbtn-brand {
+    background-color: wheat;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    width: 100px;
+}*/
+
+.btn-group .btn {
+    background-color: rgb(209, 198, 209);
+    position: relative;
+    display: inline-block;
+    text-align: left;
+    width: 100px;
+    padding: 5px;
+    border-radius: 10px;
+    margin-bottom: 2px;
+}
+
+.btn-group .btn-brand {
+    background-color: rgb(209, 198, 209);
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    width: 60px;
+    padding: 5px;
+    border-radius: 10px;
+    margin-top: 2px;    
+}
+
+.btn-group .btn-rep {
+    background-color: rgb(209, 198, 209);
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    width: 150px;
+    padding: 5px;
+    border-radius: 10px;
+    margin-top: 2px;    
+}
+
+.btn-group p {
+    display: inline-block;
+    width: 100px;
+    margin-bottom: 4px;
+    margin-top: 4px;
+    background-color: wheat;
+    border-radius: 10px;
+    padding: 5px;
+    
+}
+
+.btn-group .btn-rep:onclick {
+    color: red;
+}
+
+.btn-group-month .btn-month {
+    background-color: rgb(209, 198, 209);
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    width: 75px;
+    padding: 5px;
+    border-radius: 10px;
+    margin-top: 2px;    
+}
+
+.btn-group-month p {
+    display: inline-block;
+    width: 100px;
+    margin-bottom: 4px;
+    margin-top: 4px;
+    background-color: wheat;
+    border-radius: 10px;
+    padding: 5px;
+    
+}
+
+.btn-group-month {
+    display: none;
+}
