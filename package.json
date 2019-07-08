@@ -1,0 +1,27 @@
+{
+  "name": "indigo-db",
+  "version": "1.0.0",
+  "description": "Indigo Database and trend analysis project",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BoazPerlov/indigo-db.git"
+  },
+  "author": "Boaz Perlov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BoazPerlov/indigo-db/issues"
+  },
+  "homepage": "https://github.com/BoazPerlov/indigo-db#readme",
+  "dependencies": {
+    "gulp": "^4.0.2",
+    "react": "^16.8.6"
+  },
+  "devDependencies": {
+    "graphql": "^14.4.2",
+    "mongodb": "^3.2.7"
+  }
+}
