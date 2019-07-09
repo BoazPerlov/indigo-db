@@ -1,12 +1,12 @@
-var year = document.getElementById('FY');
+const express = require('express');
+const bodyParser = require('body-parser');
 
-var fin = year.getElementsByTagName('input');
+const app = express();
 
-for (var i=0, len=fin.length; i<len; i++) {
-    if (fin[i].type === 'checkbox') {
-        fin[i].onclick = function() {
-            console.log('A check box has been checked:' + fin[i].value);
-        }
-    }
-    
-}
+app.use(bodyParser.json());
+
+app.get('/', (req, res, next) => {
+    res.send('lol!')
+});
+
+app.listen(3000);
