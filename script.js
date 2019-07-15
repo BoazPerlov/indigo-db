@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 const graphqlHttp = require('express-graphql');
 const { buildSchema }= require('graphql');
 const mongoose = require('mongoose');
-const Event = require('./models/event')
+const Transaction = require('./models/event')
 
 const app = express();
 
@@ -11,15 +11,16 @@ app.use(bodyParser.json());
 
 app.use('/graphql', graphqlHttp({
     schema: buildSchema('\
-        type Event {\
+        type Transaction {\
             _id: ID!\
             SageRef: String!\
             Rep: String!\
             Country: String!\
-            Postcode: String!\
-            Latitude: Float!\
-            longitude: Float!\
+            Postcode: String\
+            Latitude: Float\
+            Longitude: Float\
             Customer: String!\
+            Brand: String!\
             Label: String!\
             County: String!\
             ProductCode: String!\
@@ -28,17 +29,18 @@ app.use('/graphql', graphqlHttp({
             CostPriceAverage: Float!\
             Profit: Float!\
             Currency: String!\
-            Date: String!\
+            Date: String\
             FinancialYear: String\
         }\
-        input EventInput {\
+        input TransactionInput {\
             SageRef: String!\
             Rep: String!\
             Country: String!\
-            Postcode: String!\
-            Latitude: Float!\
-            Longitude: Float!\
+            Postcode: String\
+            Latitude: Float\
+            Longitude: Float\
             Customer: String!\
+            Brand: String!\
             Label: String!\
             County: String!\
             ProductCode: String!\
@@ -47,15 +49,15 @@ app.use('/graphql', graphqlHttp({
             CostPriceAverage: Float!\
             Profit: Float!\
             Currency: String!\
-            Date: String!\
+            Date: String\
             FinancialYear: String\
         }\
         type RootQuery {\
-            events: [Event!]!\
+            transactions: [Transaction!]!\
         }\
         \
         type RootMutation {\
-            createEvent(eventInput: EventInput): Event\
+            createTransaction(transactionInput: TransactionInput): Transaction\
         }\
         \
         schema {\
@@ -64,41 +66,41 @@ app.use('/graphql', graphqlHttp({
         }\
     '),
     rootValue: {
-        events: () => {
-            return Event.find().then(events => {
-                return events.map(event => {
-                    return { ...event._doc, _id: event.id };
+        transactions: () => {
+            return Transaction.find().then(transactions => {
+                return transactions.map(transaction => {
+                    return { ...transaction._doc, _id: transaction.id };
                 });
             }).catch(err => {
                 throw err;
             });
         },
-        createEvent: (args) => {
-            const event = new Event({
-                SageRef: args.eventInput.SageRef,
-                Rep: args.eventInput.Rep,
-                Country: args.eventInput.Country,
-                Postcode: args.eventInput.Postcode,
-                Latitude: args.eventInput.Latitude,
-                Longitude: args.eventInput.Longitude,
-                Customer: args.eventInput.Customer,
-                Label: args.eventInput.Label,
-                County: args.eventInput.County,
-                Brand: args.eventInput.Brand,
-                ProductCode: args.eventInput.ProductCode,
-                Quantity: args.eventInput.Quantity,
-                Turnover: args.eventInput.Turnover,
-                CostPriceAverage: args.eventInput.CostPriceAverage,
-                Profit: args.eventInput.Profit,
-                Currency: args.eventInput.Currency,
-                Date: new Date(args.eventInput.Date),
-                FinancialYear: args.eventInput.FinancialYear
+        createTransaction: (args) => {
+            const transaction = new Transaction({
+                SageRef: args.transactionInput.SageRef,
+                Rep: args.transactionInput.Rep,
+                Country: args.transactionInput.Country,
+                Postcode: args.transactionInput.Postcode,
+                Latitude: args.transactionInput.Latitude,
+                Longitude: args.transactionInput.Longitude,
+                Customer: args.transactionInput.Customer,
+                Label: args.transactionInput.Label,
+                County: args.transactionInput.County,
+                Brand: args.transactionInput.Brand,
+                ProductCode: args.transactionInput.ProductCode,
+                Quantity: args.transactionInput.Quantity,
+                Turnover: args.transactionInput.Turnover,
+                CostPriceAverage: args.transactionInput.CostPriceAverage,
+                Profit: args.transactionInput.Profit,
+                Currency: args.transactionInput.Currency,
+                Date: new Date(args.transactionInput.Date),
+                FinancialYear: args.transactionInput.FinancialYear
             });
-            return event
+            return transaction
                 .save()
                 .then(result => {
                     console.log(result);
-                    return {...result._doc, _id: event.id};
+                    return {...result._doc, _id: transaction.id};
                 }).catch(err => {
                     console.log(err);
                     throw err;

@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const eventSchema = new Schema({
+const transactionSchema = new Schema({
     SageRef: {
         type: String,
         required: true
@@ -16,15 +16,15 @@ const eventSchema = new Schema({
     },
     Postcode: {
         type: String,
-        required: true
+        required: false
     },
     Latitude: {
         type: Number,
-        required: true
+        required: false
     },
     Longitude: {
         type: Number,
-        required: true
+        required: false
     },
     Customer: {
         type: String,
@@ -68,7 +68,7 @@ const eventSchema = new Schema({
     },
     Date: {
         type: Date,
-        required: true
+        required: false
     },
     FinancialYear: {
         type: String,
@@ -76,4 +76,4 @@ const eventSchema = new Schema({
     }
 });
 
-module.exports = mongoose.model('Event', eventSchema);
+module.exports = mongoose.model('Transaction', transactionSchema);
