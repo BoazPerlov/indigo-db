@@ -29,7 +29,7 @@ app.use('/graphql', graphqlHttp({
             CostPriceAverage: Float!\
             Profit: Float!\
             Currency: String!\
-            Date: String\
+            Date: String!\
             FinancialYear: String\
         }\
         input TransactionInput {\

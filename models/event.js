@@ -67,7 +67,7 @@ const transactionSchema = new Schema({
         required: true
     },
     Date: {
-        type: Date,
+        type: String,
         required: false
     },
     FinancialYear: {
